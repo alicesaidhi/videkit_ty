@@ -2,6 +2,7 @@ local vide = require(script.Parent.Parent.Parent.Parent.vide)
 local types = require(script.Parent.types)
 
 local source = vide.source
+local read = vide.read
 
 local theme = source()
 
@@ -21,6 +22,6 @@ return function(color: can<types.StudioColors>, modifier: can<types.StudioModifi
 	end
 
 	return function()
-		return theme():GetColor(Enum.StudioStyleGuideColor[color], Enum.StudioStyleGuideModifier[modifier])
+		return theme():GetColor(Enum.StudioStyleGuideColor[read(color)], Enum.StudioStyleGuideModifier[read(modifier)])
 	end
 end
