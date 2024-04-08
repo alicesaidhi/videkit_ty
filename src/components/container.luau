@@ -11,6 +11,8 @@ local create = vide.create
 local function container(props: vide.vFrame)
 	return create "Frame" {
 
+		Name = "Container",
+		
 		Size = UDim2.fromScale(1, 1),
 
 		BackgroundTransparency = 1,
