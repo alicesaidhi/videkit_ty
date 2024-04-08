@@ -1,4 +1,6 @@
 {
 
-	"luau-lsp.sourcemap.rojoProjectFile": "export.project.json"
+	"luau-lsp.sourcemap.rojoProjectFile": "export.project.json",
+	"luau-lsp.require.mode": "relativeToFile",
+	"luau-lsp.completion.imports.requireStyle": "alwaysRelative"
 }
