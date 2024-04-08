@@ -1,7 +1,6 @@
 
 local vide = require(script.Parent.Parent.Parent.vide)
 local ref = require(script.Parent.Parent.util.ref)
-local container = require(script.Parent.container)
 
 local create = vide.create
 local source = vide.source
