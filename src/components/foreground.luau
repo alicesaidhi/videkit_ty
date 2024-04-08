@@ -18,7 +18,7 @@ local function background(props: background)
 
 		Size = UDim2.fromScale(1, 1),
 
-		BackgroundColor3 = color("MainBackground", "Default"),
+		BackgroundColor3 = color("Tab", "Default"),
 
 		props
 	}

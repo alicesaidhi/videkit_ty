@@ -17,8 +17,7 @@ local function background(props: background)
 		Name = "Background",
 
 		Size = UDim2.fromScale(1, 1),
-
-		BackgroundColor3 = color("Border", "Disabled"),
+		BackgroundColor3 = color("MainBackground"),
 
 		props
 	}
