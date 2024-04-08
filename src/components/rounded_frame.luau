@@ -6,6 +6,7 @@ single corner.
 ]]
 
 local vide = require(script.Parent.Parent.Parent.vide)
+local container = require(script.Parent.container)
 
 local create = vide.create
 local read = vide.read
@@ -19,7 +20,9 @@ type rounded_frame = {
 
 	color: can<Color3>?,
 
-	layout: vide.vFrame
+	layout: vide.vFrame,
+
+	[number]: Instance,
 }
 
 local function rounded_frame(props: rounded_frame)
@@ -163,6 +166,10 @@ local function rounded_frame(props: rounded_frame)
 			AnchorPoint = Vector2.new(0.5, 1),
 
 			BackgroundColor3 = props.color,
+		},
+
+		container {
+			unpack(props)
 		},
 
 		props.layout

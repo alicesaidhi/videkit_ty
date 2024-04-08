@@ -20,7 +20,7 @@ type portal = {
 	--- controls if the portal should inherit the layout of the frame it's under
 	inherit_layout: can<boolean>?,
 
-	layout: vide.vFrame
+	[number]: Instance,
 }
 
 local layout = 100_000
@@ -71,7 +71,7 @@ local function portal(props: portal)
 
 			Interactable = false,
 
-			props.layout
+			unpack(props)
 
 		})
 	end))
