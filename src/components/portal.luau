@@ -1,4 +1,11 @@
+--[[
 
+portal is used to render a component over other components.
+it will find the nearest layer collector to parent itself and it's descendants
+onto, and if inherit_layout is enabled, inherits the nearest guibase2d's size and
+position properties.
+
+]]
 local vide = require(script.Parent.Parent.Parent.vide)
 local ref = require(script.Parent.Parent.util.ref)
 
