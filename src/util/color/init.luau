@@ -22,8 +22,9 @@ type can<T> = T | () -> T
 
 return function(name: can<types.StudioColors>, modifier: can<types.StudioModifiers>?)
 	if RunService:IsStudio() then
+		if not name then return studio() end
 		return studio(name, modifier or "Default")
 	end
 
 	return error("unsupported outside of studio")
-end
+end :: ((name: can<types.StudioColors>, modifier: can<types.StudioModifiers>?) -> () -> Color3) & () -> string
