@@ -38,7 +38,7 @@ local function tabs(props: tabs)
 
 	return list {
 
-		list = {Padding = UDim.new(), HorizontalAlignment = Enum.HorizontalAlignment.Right},
+		list = {Padding = UDim.new()},
 
 		row {
 			list = {Padding = UDim.new()},
@@ -47,7 +47,9 @@ local function tabs(props: tabs)
 				Size = UDim2.new(1, 0, 0, 24),
 
 				BackgroundColor3 = color("Tab"),
-				BackgroundTransparency = 0
+				BackgroundTransparency = 0,
+
+				ZIndex = 100
 			},
 
 			create "UIStroke" {
@@ -113,7 +115,7 @@ local function tabs(props: tabs)
 
 		background {
 
-			Size = UDim2.new(1, -1, 1, 0),
+			Size = UDim2.fromScale(1, 1),
 
 			create "UIStroke" {
 				Color = color("Border")
