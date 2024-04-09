@@ -54,6 +54,8 @@ local function button(props: button)
 		end, modifier), 1/12, 1),
 		AutoButtonColor = false,
 
+		Activated = props.activated,
+
 		create "UICorner" {
 			CornerRadius = UDim.new(0, 4),
 		},
