@@ -69,8 +69,6 @@ local function portal(props: portal)
 
 			BackgroundTransparency = 1,
 
-			Interactable = false,
-
 			unpack(props)
 
 		})
