@@ -18,6 +18,7 @@ local create = vide.create
 local switch = vide.switch
 local indexes = vide.indexes
 local source = vide.source
+local spring = vide.spring
 local changed = vide.changed
 
 type can<T> = T | () -> T
@@ -76,11 +77,11 @@ local function tabs(props: tabs)
 					Size = UDim2.fromScale(0, 1),
 					AutomaticSize = Enum.AutomaticSize.X,
 
-					BackgroundColor3 = color("Tab", function()
+					BackgroundColor3 = spring(color("Tab", function()
 						return if is_selected() then "Selected"
 							elseif gui_state() == Enum.GuiState.Hover then "Hover"
 							else "Default"
-					end),
+					end), 0.1),
 
 					changed("GuiState", gui_state),
 
@@ -93,13 +94,16 @@ local function tabs(props: tabs)
 						padding {
 							x = UDim.new(0, 16),
 							y = UDim.new(0, 4),
+							top = UDim.new(0, 5)
 						},
 
 						text {
-							TextColor3 = color(function()
-								return if is_selected() or gui_state() ~= Enum.GuiState.Idle then "BrightText" else "TitlebarText"
-							end),
 							TextSize = 14,
+							TextColor3 = spring(color(function()
+								return if is_selected() or gui_state() ~= Enum.GuiState.Idle
+									then "BrightText"
+									else "TitlebarText"
+							end), 0.1),
 							Text = function()
 								return value().name
 							end,
@@ -108,11 +112,12 @@ local function tabs(props: tabs)
 
 					create "Frame" {
 
-						Size = UDim2.new(1, 0, 0, 1),
+						Size = UDim2.new(1, 0, 0, 2),
 
 						BackgroundColor3 = color("RibbonTabTopBar"),
-
-						Visible = is_selected
+						BackgroundTransparency = spring(function()
+							return if is_selected() then 0 else 1 
+						end, 0.1)
 
 					}
 				}
