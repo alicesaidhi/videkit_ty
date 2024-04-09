@@ -32,14 +32,40 @@ return function(target)
 					end
 				},
 				{
-					name = "Model",
+					name = "Graph",
 					child = function()
 						return background {
 							padding {
 								padding = UDim.new(0, 8)
 							},
 							text {
-								Text = "Model"
+								Text = "Graph"
+							}
+						}
+					end
+				},
+				{
+					name = "Instances",
+					child = function()
+						return background {
+							padding {
+								padding = UDim.new(0, 8)
+							},
+							text {
+								Text = "UI"
+							}
+						}
+					end
+				},
+				{
+					name = "Debug",
+					child = function()
+						return background {
+							padding {
+								padding = UDim.new(0, 8)
+							},
+							text {
+								Text = "Debug"
 							}
 						}
 					end
