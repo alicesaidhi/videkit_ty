@@ -1,3 +1,8 @@
+--[[
+
+Fast and easy to use padding utility to make controlling padding quick and simple.
+
+]]
 
 local vide = require(script.Parent.Parent.Parent.vide)
 

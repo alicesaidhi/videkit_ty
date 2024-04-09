@@ -1,4 +1,8 @@
+--[[
 
+Buttons are used to convey actions a user can perform.
+
+]]
 
 local vide = require(script.Parent.Parent.Parent.vide)
 local color = require(script.Parent.Parent.util.color)

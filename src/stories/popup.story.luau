@@ -16,6 +16,7 @@ return function(target)
 			
 			popup {
 				enabled = enabled,
+				inherit_layout = true,
 
 				background {
 

@@ -1,3 +1,9 @@
+--[[
+
+Tabs allow for rendering multiple components in the same widget. This is
+useful for splitting information
+
+]]
 
 local vide = require(script.Parent.Parent.Parent.vide)
 local color = require(script.Parent.Parent.util.color)

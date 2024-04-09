@@ -1,3 +1,8 @@
+--[[
+
+Creates a container for a list of elements.
+
+]]
 
 local vide = require(script.Parent.Parent.Parent.vide)
 local container = require(script.Parent.container)

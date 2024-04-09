@@ -1,3 +1,8 @@
+--[[
+
+Creates a popup that blocks all input.
+
+]]
 
 local vide = require(script.Parent.Parent.Parent.vide)
 local container = require(script.Parent.container)
