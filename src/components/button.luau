@@ -25,7 +25,10 @@ type button = {
 
 	layout: vide.vTextButton?,
 	layout_text: vide.vTextLabel?,
-	child: vide.vFrame?
+	child: vide.vFrame?,
+
+	_custom: can<any>?,
+	_noborder: can<boolean>?
 
 }
 
@@ -53,7 +56,7 @@ local function button(props: button)
 			return not read(disabled)
 		end,
 
-		BackgroundColor3 = spring(color(function()
+		BackgroundColor3 = spring(color(props._custom or function()
 			return if read(primary) then "MainButton" else "Button"
 		end, modifier), 1/12, 1),
 		AutoButtonColor = false,
@@ -68,7 +71,10 @@ local function button(props: button)
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 			Color = color(function()
 				return if read(primary) then "MainButton" else "Border"
-			end, "Pressed")
+			end, "Pressed"),
+			Enabled = function()
+				return not read(props._noborder)
+			end
 		},
 
 		container {
