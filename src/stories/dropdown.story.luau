@@ -14,7 +14,10 @@ return function(target)
 			options = {
 				"a",
 				"b",
-				"c"
+				"c",
+				"d",
+				"e",
+				"f"
 			}
 		}
 	end, target)
