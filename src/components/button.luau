@@ -102,7 +102,7 @@ local function button(props: button)
 
 		padding {
 			x = UDim.new(0, 6),
-			y = UDim.new(0, 0)
+			y = UDim.new(0, 6)
 		},
 
 		changed("GuiState", gui_state),
