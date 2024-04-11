@@ -28,7 +28,10 @@ type button = {
 	child: vide.vFrame?,
 
 	_custom: can<any>?,
-	_noborder: can<boolean>?
+	_noborder: can<boolean>?,
+	_selected: can<boolean>?,
+	_nopadding: can<boolean>?,
+	_nocorner: can<boolean>?,
 
 }
 
@@ -38,9 +41,15 @@ local function button(props: button)
 	local gui_state = source(Enum.GuiState.Idle)
 	local disabled = props.disabled or false
 
+	local no_padding = props._nopadding
+	local no_border = props._noborder
+	local no_corner = props._nocorner
+	local selected = props._selected
+
 	local function modifier()
 		return
 			if gui_state() == Enum.GuiState.NonInteractable then "Disabled"
+			elseif read(selected) then "Selected"
 			elseif gui_state() == Enum.GuiState.Press then "Pressed"
 			elseif gui_state() == Enum.GuiState.Hover then "Hover"
 			else "Default"
@@ -64,7 +73,9 @@ local function button(props: button)
 		Activated = props.activated,
 
 		create "UICorner" {
-			CornerRadius = UDim.new(0, 4),
+			CornerRadius = function()
+				return if read(no_corner) then UDim.new() else UDim.new(0, 4)
+			end,
 		},
 
 		create "UIStroke" {
@@ -73,7 +84,7 @@ local function button(props: button)
 				return if read(primary) then "MainButton" else "Border"
 			end, "Pressed"),
 			Enabled = function()
-				return not read(props._noborder)
+				return not read(no_border)
 			end
 		},
 
@@ -100,10 +111,12 @@ local function button(props: button)
 			props.child,
 		},
 
-		padding {
-			x = UDim.new(0, 6),
-			y = UDim.new(0, 6)
-		},
+		function()
+			if read(no_padding) then return {} end
+			return padding {
+				padding = UDim.new(0, 6)
+			}
+		end,
 
 		changed("GuiState", gui_state),
 
