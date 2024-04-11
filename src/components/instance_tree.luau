@@ -2,10 +2,7 @@
 local vide = require(script.Parent.Parent.Parent.vide)
 local tree = require(script.Parent.tree)
 
-local create = vide.create
-local derive = vide.derive
 local source = vide.source
-local read = vide.read
 
 type can<T> = T | () -> T
 type instance_tree = {
@@ -27,23 +24,13 @@ local function instance_tree(props: instance_tree)
 	end
 
 	local function turn_children_into_elements(children: {Instance})
+		debug.profilebegin("build tree")
 		local elements = {}
 		for i, child in children do
-			local memo
 			elements[i] = {
 				name = child.Name,
 				instance = child,
-				children = function()
-					if memo then
-						return memo
-					else
-						memo = turn_children_into_elements(child:GetChildren())
-						return memo
-					end
-				end,
-				can_expand = function()
-					return #child:GetChildren() > 0
-				end,
+				children = turn_children_into_elements(child:GetChildren()),
 				
 				update_selected = update_selected,
 				selected = function()
@@ -51,6 +38,7 @@ local function instance_tree(props: instance_tree)
 				end
 			}
 		end
+		debug.profileend()
 		return elements
 	end
 	

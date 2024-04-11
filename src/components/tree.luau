@@ -80,7 +80,7 @@ local function element(props: element_props)
 	local function expandable()
 		local can_expand = read(element().can_expand)
 		local children = read(element()._children)
-		local has_children = typeof(element().children) == "table"
+		local has_children = typeof(element().children) == "table" and #element().children > 0
 		return can_expand or children or has_children
 	end
 	
@@ -88,7 +88,7 @@ local function element(props: element_props)
 
 		text = function()
 			if element() == nil then return "" end
-			return `{element().name}`
+			return read(element().name)
 		end,
 
 		activated = function()
