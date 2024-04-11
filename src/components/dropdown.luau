@@ -58,7 +58,7 @@ local function dropdown(props: dropdown)
 
 				AnchorPoint = Vector2.new(1, 0),
 				Position = UDim2.fromScale(1, 0),
-				Size = UDim2.new(0, 18, 0, 24),
+				Size = UDim2.new(0, 18, 0, 16),
 
 				create "ImageLabel" {
 
