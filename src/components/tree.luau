@@ -30,8 +30,8 @@ type ielement = element & {
 	_scope: () -> ()
 }
 type tree = {
-	elements: can<{element}>,
-	layout: vide.vScrollingFrame
+	elements: {element},
+	layout: vide.vScrollingFrame?
 }
 
 local function shallow_eq(a: {any}, b: {any}): boolean
@@ -75,6 +75,13 @@ local function element(props: element_props)
 
 	local function expanded()
 		return not not element()._children
+	end
+
+	local function expandable()
+		local can_expand = read(element().can_expand)
+		local children = read(element()._children)
+		local has_children = typeof(element().children) == "table"
+		return can_expand or children or has_children
 	end
 	
 	return button {
@@ -122,6 +129,18 @@ local function element(props: element_props)
 				
 				BackgroundTransparency = 1,
 				
+				Interactable = expandable,
+				
+				Activated = function()
+					if expanded() then
+						batch(function()
+							collapse(index())
+						end)
+					else
+						expand(index())
+					end
+				end,
+				
 				image {
 					Position = UDim2.fromScale(0.5, 0.5),
 					Size = function()
@@ -136,23 +155,9 @@ local function element(props: element_props)
 					end,
 					ScaleType = Enum.ScaleType.Fit,
 					
-					Visible = function()
-						local can_expand = read(element().can_expand)
-						local children = read(element()._children)
-						local has_children = typeof(read(element().children)) == "table"
-						return children or has_children or can_expand
-					end,
+					Visible = expandable,
 				},
 
-				activated = function()
-					if expanded() then
-						batch(function()
-							collapse(index())
-						end)
-					else
-						expand(index())
-					end
-				end,
 			},
 			image {
 				Size = UDim2.fromOffset(16, 16),
@@ -231,9 +236,6 @@ local function tree(props: tree)
 
 		for _, child in children do
 			child._nesting = element._nesting + 1
-			if child._children then
-
-			end
 		end
 
 		stored_elements(stored_elements())
@@ -266,7 +268,9 @@ local function tree(props: tree)
 				expand = expand,
 				collapse = collapse,
 			}
-		end
+		end,
+
+		layout = props.layout
 
 	}
 	
