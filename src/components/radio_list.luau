@@ -4,7 +4,6 @@ local list = require(script.Parent.list)
 local radio_button = require(script.Parent.radio_button)
 
 local indexes = vide.indexes
-local source = vide.source
 local read = vide.read
 
 type can<T> = T | () -> T
