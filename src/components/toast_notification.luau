@@ -1,3 +1,4 @@
+--todo: make this better
 local Players = game:GetService("Players")
 
 local vide = require(script.Parent.Parent.Parent.vide)
@@ -17,7 +18,6 @@ local cleanup = vide.cleanup
 local source = vide.source
 local changed = vide.changed
 local indexes = vide.indexes
-local read = vide.read
 
 local function create_mounting()
 	return root(function()
