@@ -52,6 +52,7 @@ local function tabs(props: tabs)
 
 			layout = {	
 				Size = UDim2.new(1, 0, 0, 24),
+				AutomaticSize = Enum.AutomaticSize.None,
 
 				BackgroundColor3 = color("Tab"),
 				BackgroundTransparency = 0,
@@ -74,14 +75,17 @@ local function tabs(props: tabs)
 				end
 
 				return create "TextButton" {
-					Size = UDim2.fromScale(0, 1),
+					Size = function()
+						return if is_selected() then UDim2.new(0, 0, 1, 2) else UDim2.fromScale(0, 1)
+					end,
 					AutomaticSize = Enum.AutomaticSize.X,
 
-					BackgroundColor3 = spring(color("Tab", function()
-						return if is_selected() then "Selected"
-							elseif gui_state() == Enum.GuiState.Hover then "Hover"
+					BackgroundColor3 = color(function()
+						return if is_selected() then "MainBackground" else "Tab"
+					end, function()
+						return if gui_state() == Enum.GuiState.Hover then "Hover"
 							else "Default"
-					end), 0.1),
+					end),
 
 					changed("GuiState", gui_state),
 
