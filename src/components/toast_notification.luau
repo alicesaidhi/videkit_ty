@@ -32,7 +32,6 @@ local function create_mounting()
 
 			create "UIListLayout" {
 				HorizontalAlignment = Enum.HorizontalAlignment.Right,
-				Padding = UDim.new(0, 8)
 			},
 
 			padding {}
