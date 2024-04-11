@@ -131,7 +131,7 @@ local function infinite_list(props: infinite_list)
 			}
 		end),
 
-		layout = props.layout
+		props.layout
 	}
 	
 end
