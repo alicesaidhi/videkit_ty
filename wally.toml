@@ -1,6 +1,6 @@
 [package]
-name = "aloroid/vide-studio-components"
-version = "0.1.0"
+name = "alicesaidhi/videkit-ty"
+version = "0.1.1"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
