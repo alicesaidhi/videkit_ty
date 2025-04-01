@@ -6,7 +6,7 @@ is low enough (< 0.01) it will parent the given instances to an normal Frame, ma
 it render normally.
 
 ]]
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 
 local create = vide.create
 local read = vide.read

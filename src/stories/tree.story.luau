@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local tree = require(script.Parent.Parent.components.tree)
 
 return function(target)

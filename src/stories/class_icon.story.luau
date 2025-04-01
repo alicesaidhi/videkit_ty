@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local class_icon = require(script.Parent.Parent.components.class_icon)
 local row = require(script.Parent.Parent.components.row)
 

@@ -4,7 +4,7 @@ Buttons are used to convey actions a user can perform.
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local color = require(script.Parent.Parent.util.color)
 local container = require(script.Parent.container)
 local padding = require(script.Parent.padding)

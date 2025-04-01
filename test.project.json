@@ -1,0 +1,21 @@
+{
+  "emitLegacyScripts": false,
+  "name": "videkit_ty",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "videkit_ty": {
+        "$className": "Folder",
+        "src": {
+          "$path": "src"
+        },
+        "roblox_packages": {
+          "$path": "roblox_packages"
+        }
+      },
+      "tests": {
+        "$path": "tests"
+      }
+    }
+  }
+}

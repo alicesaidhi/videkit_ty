@@ -1,5 +1,5 @@
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local quick = require(script.Parent.Parent.util.quick)
 local button = require(script.Parent.button)
 local image = require(script.Parent.image)

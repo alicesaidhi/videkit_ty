@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local background = require(script.Parent.Parent.components.background)
 local loading_circle = require(script.Parent.Parent.components.loading_circle)
 

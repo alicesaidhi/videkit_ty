@@ -5,7 +5,7 @@ useful for splitting information
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local color = require(script.Parent.Parent.util.color)
 local background = require(script.Parent.background)
 local container = require(script.Parent.container)

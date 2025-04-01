@@ -4,7 +4,7 @@ Creates a popup that blocks all input.
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local container = require(script.Parent.container)
 local portal = require(script.Parent.portal)
 local shadow = require(script.Parent.shadow)

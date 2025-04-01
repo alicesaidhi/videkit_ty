@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local bullet_list = require(script.Parent.Parent.components.bullet_list)
 local infinite_list = require(script.Parent.Parent.components.infinite_list)
 local scroll_frame = require(script.Parent.Parent.components.scroll_frame)

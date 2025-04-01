@@ -1,5 +1,5 @@
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local color = require(script.Parent.Parent.util.color)
 local button = require(script.Parent.button)
 local container = require(script.Parent.container)
