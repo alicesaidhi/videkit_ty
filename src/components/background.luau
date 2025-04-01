@@ -4,7 +4,7 @@ A basic background used to contain frames
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local color = require(script.Parent.Parent.util.color)
 
 local create = vide.create

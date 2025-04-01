@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local container = require(script.Parent.Parent.components.container)
 local mouse = require(script.Parent.Parent.components.mouse)
 local text = require(script.Parent.Parent.components.text)

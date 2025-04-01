@@ -4,7 +4,7 @@ Creates a drop shadow useful to convey depth and difference.
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local color = require(script.Parent.Parent.util.color)
 local padding = require(script.Parent.padding)
 

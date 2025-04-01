@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local background = require(script.Parent.Parent.components.background)
 local dropdown = require(script.Parent.Parent.components.dropdown)
 local text_input = require(script.Parent.Parent.components.text_input)

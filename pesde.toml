@@ -1,15 +1,10 @@
-name = "alicesaidhi/videkit_ty"
+name = "jmesrje/videkit_ty"
 version = "0.1.1"
 description = "Contains a bunch of plugin components written for Vide"
-authors = ["alicesaidhi"]
-repository = "https://github.com/alicesaidhi/videkit_ty"
+authors = ["alicesaidhi", "jmesrje"]
+repository = "https://github.com/jmesrje/videkit_ty"
 license = "MIT"
-includes = [
-    "src/**",
-    "LICENSE",
-    "README.md",
-    "pesde.toml"
-]
+includes = ["pesde.toml", "README.md", "LICENSE", "src/**/*"]
 
 [target]
 environment = "roblox"
@@ -19,6 +14,9 @@ build_files = ["src"]
 [indices]
 default = "https://github.com/pesde-pkg/index"
 
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
 [scripts]
 roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
 sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
@@ -26,3 +24,6 @@ sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
 [dev_dependencies]
 scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
 rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
+
+[dependencies]
+vide = { wally = "centau/vide", version = "^0.3.1" }

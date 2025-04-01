@@ -4,7 +4,7 @@ container is a basic transparent frame that covers the entire frame.
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 
 local create = vide.create
 

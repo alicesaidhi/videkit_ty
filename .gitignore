@@ -1,7 +1,8 @@
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
+# Pesde
+.pesde
+roblox_packages
+lune_packages
+luau_packages
 
-/Packages
-
-/sourcemap.json
+# Rojo
+sourcemap.json

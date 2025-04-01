@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local container = require(script.Parent.Parent.components.container)
 local rounded_frame = require(script.Parent.Parent.components.rounded_frame)
 

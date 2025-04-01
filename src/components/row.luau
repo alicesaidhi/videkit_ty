@@ -4,7 +4,7 @@ Creates a container used to fill items in a row.
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local container = require(script.Parent.container)
 
 local create = vide.create

@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local background = require(script.Parent.Parent.components.background)
 
 return function(target)
@@ -7,4 +7,4 @@ return function(target)
 		return background {}
 	end, target)
 
-end
+	end

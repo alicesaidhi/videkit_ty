@@ -4,7 +4,7 @@ infinite lists dynamically render elements when necessary.
 if the index is -1, that means it should go unrendered.
 
 ]]
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local container = require(script.Parent.container)
 local scroll_frame = require(script.Parent.scroll_frame)
 

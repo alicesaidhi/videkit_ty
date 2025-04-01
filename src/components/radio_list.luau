@@ -1,5 +1,5 @@
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local list = require(script.Parent.list)
 local radio_button = require(script.Parent.radio_button)
 

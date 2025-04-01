@@ -6,7 +6,7 @@ onto, and if inherit_layout is enabled, inherits the nearest guibase2d's size an
 position properties.
 
 ]]
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 local ref = require(script.Parent.Parent.util.ref)
 
 local create = vide.create

@@ -1,4 +1,4 @@
-local vide = require(script.Parent.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.Parent.roblox_packages.vide)
 local types = require(script.Parent.types)
 
 local source = vide.source

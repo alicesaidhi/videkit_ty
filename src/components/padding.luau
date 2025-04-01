@@ -4,7 +4,7 @@ Fast and easy to use padding utility to make controlling padding quick and simpl
 
 ]]
 
-local vide = require(script.Parent.Parent.Parent.vide)
+local vide = require(script.Parent.Parent.Parent.roblox_packages.vide)
 
 local create = vide.create
 
